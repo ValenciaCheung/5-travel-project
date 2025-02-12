@@ -1,0 +1,84 @@
+/* 全局样式 */
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+/* 头部样式 */
+header {
+  position: relative;
+  text-align: center;
+}
+
+/* 包裹标题和按钮的容器 */
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* 标题样式 */
+header h2,
+header h1 {
+  margin: 0;
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+header h3 {
+  margin: 0;
+  color: white;
+  font-weight: 200;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+header h1 {
+  font-size: 80px;
+  margin-bottom: 10px; /* 为了让按钮和标题有间隔 */
+}
+
+/* 按钮样式 */
+.learn-more-btn {
+  background-color: #5adb36;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #005f8d;
+}
+
+/* GIF 样式 */
+header img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+/* 页脚样式 */
+footer {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+footer a {
+  color: #5adb36;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
