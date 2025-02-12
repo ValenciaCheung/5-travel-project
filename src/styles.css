@@ -67,14 +67,66 @@ header img {
 }
 
 /* 页脚样式 */
+/* 页脚样式 */
 footer {
-  margin-top: 20px;
+  background-color: #5adb36;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  color: white;
+}
+
+/* 每一列的样式 */
+.footer-column {
+  width: 30%;
+}
+
+/* 第1列: 标题样式 */
+.footer-column h1 {
+  font-size: 72px;
+  margin: -20px 0;
+  font-weight: 700;
+  text-align: left;
+}
+.footer-column .openai-text {
+  font-size: 20px;
+}
+
+/* 第2列和第3列的标题样式 */
+.footer-column h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* 第2列和第3列的内容样式 */
+.footer-column p {
   font-size: 1rem;
-  color: #333;
+  line-height: 1.5;
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* 响应式调整 */
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h1 {
+    font-size: 48px;
+  }
 }
 
 footer a {
-  color: #5adb36;
+  color: #f9fff8;
   text-decoration: none;
   font-weight: bold;
 }
