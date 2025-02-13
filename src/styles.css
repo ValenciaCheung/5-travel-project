@@ -62,13 +62,12 @@ header h1 {
 header img {
   width: 100%;
   height: auto;
-
   display: block;
 }
 
 /* 主体样式 */
 main {
-  padding: 20px;
+  padding: 80px;
 }
 
 /* Grid 布局 */
@@ -105,8 +104,8 @@ main {
 
 /* 图片容器样式 */
 .section-image-container {
-  width: 80%;
-  height: 480px;
+  width: 100%;
+  height: 450px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 20px; /* 圆角效果 */
@@ -140,12 +139,46 @@ main {
   text-align: left;
 }
 
-/* Seven Hills 数据 + 链接按钮样式 */
-.section-footer {
-  text-align: center;
+/* data + link/button styles */
+.section-data {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 左侧小列(1fr), 右侧大列(2fr) */
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 0 10px;
 }
-
-.keyword-btn {
+.section-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+/* 横向排列的链接 */
+.link-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.data-btn-1 {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #45c7e8;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  white-space: nowrap; /* 防止内容内部换行 */
+}
+.data-btn-2 {
   display: inline-block;
   padding: 12px 24px;
   font-size: 1.2rem;
@@ -154,57 +187,29 @@ main {
   text-decoration: none;
   border-radius: 20px;
   transition: background-color 0.3s ease;
+  text-align: center;
+  white-space: nowrap; /* 防止内容内部换行 */
+  margin: 10px 0;
+}
+
+.data-btn-2:hover {
+  background-color: #45a23d;
+}
+.keyword-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #f3cd66;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .keyword-btn:hover {
-  background-color: #45a23d;
-}
-
-/* 响应式调整 */
-@media (max-width: 900px) {
-  .header-content {
-    width: 90%; /* 让内容在小屏幕上更适配 */
-  }
-
-  .header-content h2 {
-    font-size: 1.5rem; /* 调整副标题大小 */
-  }
-
-  .header-content h1 {
-    font-size: 2rem; /* 调整主标题大小 */
-    margin-bottom: 8px;
-  }
-
-  .header-content h3 {
-    font-size: 1rem; /* 缩小副标题 */
-  }
-
-  .learn-more-btn {
-    font-size: 1rem; /* 调整按钮大小 */
-    padding: 16px 16px;
-  }
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-  .section-image-container {
-    width: 100%;
-    height: 300px;
-  }
-  .section-image-container img {
-    object-fit: cover;
-  }
-  .section-content h2 {
-    font-size: 2rem;
-  }
-
-  .section-text {
-    grid-template-columns: 1fr;
-  }
-
-  .keyword-btn {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
+  background-color: #d3a831;
+  text-decoration: underline;
 }
 
 /* 页脚样式 */
@@ -247,8 +252,84 @@ footer {
   text-align: left;
 }
 
+footer a {
+  color: #f9fff8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* 响应式调整 */
 @media (max-width: 900px) {
+  .header-content {
+    width: 90%; /* 让内容在小屏幕上更适配 */
+  }
+  .header-content h1 {
+    font-size: 2rem; /* 调整主标题大小 */
+    margin-bottom: 8px;
+  }
+  .header-content h2 {
+    font-size: 1.5rem; /* 调整副标题大小 */
+  }
+
+  .header-content h3 {
+    font-size: 1rem; /* 缩小副标题 */
+  }
+
+  .learn-more-btn {
+    font-size: 1rem; /* 调整按钮大小 */
+    padding: 16px 16px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .section-image-container {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  .section-image-container img {
+    object-fit: cover;
+  }
+  .section-content h2 {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .section-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .section-link {
+    text-align: center;
+  }
+  .link-container {
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .keyword-btn {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .data-btn-1,
+  .data-btn-2 {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
   footer {
     flex-direction: column;
     align-items: center;
@@ -263,14 +344,4 @@ footer {
   .footer-column h1 {
     font-size: 48px;
   }
-}
-
-footer a {
-  color: #f9fff8;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
