@@ -66,7 +66,147 @@ header img {
   display: block;
 }
 
-/* 页脚样式 */
+/* 主体样式 */
+main {
+  padding: 20px;
+}
+
+/* Grid 布局 */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto auto;
+  gap: 20px;
+}
+
+/* 左上角序号样式 */
+.section-header {
+  background-color: #5adb36;
+  padding: 12px;
+  font-size: 28px;
+  color: white;
+  text-align: left;
+  width: 2.5rem;
+  height: 2.5rem; /* 设置高度以保持正方形 */
+  border-radius: 1rem;
+}
+
+.section-number {
+  display: block;
+  background-color: #5adb36;
+}
+
+/* 标题样式 */
+.section-content h2 {
+  font-size: 66px;
+  margin: 0;
+  text-align: left;
+}
+
+/* 图片容器样式 */
+.section-image-container {
+  width: 80%;
+  height: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px; /* 圆角效果 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 自适应裁剪图片，保持比例 */
+}
+
+/* 文字两列样式 */
+.section-text {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.text-left h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.text-right p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Seven Hills 数据 + 链接按钮样式 */
+.section-footer {
+  text-align: center;
+}
+
+.keyword-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #5adb36;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.keyword-btn:hover {
+  background-color: #45a23d;
+}
+
+/* 响应式调整 */
+@media (max-width: 900px) {
+  .header-content {
+    width: 90%; /* 让内容在小屏幕上更适配 */
+  }
+
+  .header-content h2 {
+    font-size: 1.5rem; /* 调整副标题大小 */
+  }
+
+  .header-content h1 {
+    font-size: 2rem; /* 调整主标题大小 */
+    margin-bottom: 8px;
+  }
+
+  .header-content h3 {
+    font-size: 1rem; /* 缩小副标题 */
+  }
+
+  .learn-more-btn {
+    font-size: 1rem; /* 调整按钮大小 */
+    padding: 16px 16px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .section-image-container {
+    width: 100%;
+    height: 300px;
+  }
+  .section-image-container img {
+    object-fit: cover;
+  }
+  .section-content h2 {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    grid-template-columns: 1fr;
+  }
+
+  .keyword-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
 /* 页脚样式 */
 footer {
   background-color: #5adb36;
