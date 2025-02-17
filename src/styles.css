@@ -70,7 +70,7 @@ header h3 {
   cursor: pointer;
 }
 .learn-more-btn:hover {
-  background-color: #005f8d;
+  background-color: #037920;
 }
 
 .data-btn-1 {
@@ -240,8 +240,90 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/*card*/
+.grid {
+  display: grid;
+  grid-gap: 24px;
+}
+
+.grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 20px 0px 20px;
+}
+
+.card {
+  background: white;
+  margin: 20px 0px;
+  border-radius: 20px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
+.btn {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  background-color: #1da752;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0d6c31;
+}
+
+.img-responsive {
+  max-width: 100%;
+  display: block;
+  border-radius: 20px 20px 0px 0px;
+}
+
+main h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: #272044;
+  margin: 0;
+}
+
+main h5 {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1;
+  color: #272044;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
+}
+
 /* 响应式调整 */
 @media (max-width: 900px) {
+  grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
   .grid-container-2,
   .grid-container {
     grid-template-columns: 1fr;
@@ -287,6 +369,10 @@ footer a:hover {
 
   .section-image-container-2 {
     max-height: 300px;
+  }
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+    padding: 0px 10px 0px 10px;
   }
 
   .footer-column {
