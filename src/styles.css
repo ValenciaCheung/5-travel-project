@@ -110,12 +110,11 @@ header img {
   background-color: #30f2642e;
   margin: 0 auto;
 }
-.grid-container {
-  background-color: #ffffff;
-}
+
 .grid-container {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto auto;
+  background-color: #ffffff;
 }
 
 .grid-container-2 {
@@ -247,6 +246,7 @@ footer a:hover {
 }
 
 .grid-3-columns {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 20px 20px 0px 20px;
 }
@@ -289,8 +289,34 @@ footer a:hover {
 
 .img-responsive {
   max-width: 100%;
+  height: auto;
   display: block;
   border-radius: 20px 20px 0px 0px;
+}
+.embed-responsive {
+  width: 100%;
+  height: auto;
+}
+.ins-embeds {
+  margin: 0 auto;
+}
+.ins-gallery {
+  background-color: #30f2642e;
+}
+main .ins-gallery h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  color: #272044;
+  margin: 20px;
+  text-align: center;
+  padding: 20px 0px;
+}
+main h3 {
+  font-size: 16px;
+  color: #969697;
+  text-align: center;
+  margin-top: 0;
 }
 
 main h4 {
@@ -320,7 +346,7 @@ main p {
 
 /* 响应式调整 */
 @media (max-width: 900px) {
-  grid {
+  .grid-3-columns {
     grid-template-columns: 1fr;
     grid-gap: 32px;
   }
